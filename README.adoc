@@ -1,0 +1,6 @@
+= Decks using Asciidoc
+
+Credits:
+
+* https://github.com/mojavelinux/dzslides/
+* https://github.com/binout/asciidoctor-slide-generator
