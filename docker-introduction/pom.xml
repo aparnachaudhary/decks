@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.aparnachaudhary</groupId>
-    <artifactId>decks</artifactId>
+    <artifactId>docker-introduction</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
-        <asciidoctor.version>1.5.0</asciidoctor.version>
+        <asciidoctor.version>1.5.2</asciidoctor.version>
         <project.slides.directory>${project.build.directory}/generated-slides</project.slides.directory>
         <backend/>
         <templateDir/>
@@ -100,98 +100,10 @@
 
     <profiles>
         <profile>
-            <id>deckjs</id>
+            <id>dzslides</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            <properties>
-                <backend>deckjs</backend>
-                <templateDir>${basedir}/asciidoctor-backends/haml</templateDir>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>rubygems</groupId>
-                    <artifactId>tilt</artifactId>
-                    <version>2.0.1</version>
-                    <type>gem</type>
-                    <scope>provided</scope>
-                </dependency>
-                <dependency>
-                    <groupId>rubygems</groupId>
-                    <artifactId>haml</artifactId>
-                    <version>4.0.5</version>
-                    <type>gem</type>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctor-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>generate-slides</id>
-                                <goals>
-                                    <goal>process-asciidoc</goal>
-                                </goals>
-                                <configuration>
-                                     <attributes>
-                                        <!-- put here the deck.js specific attributes -->
-                                        <deckjs_theme>swiss</deckjs_theme>
-                                        <deckjs_transition>fade</deckjs_transition>
-                                        <navigation>true</navigation>
-                                        <goto>true</goto>
-                                        <status>true</status>
-                                    </attributes>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <profile>
-            <id>revealjs</id>
-            <properties>
-                <backend>revealjs</backend>
-                <templateDir>${basedir}/asciidoctor-reveal.js/templates/slim</templateDir>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>rubygems</groupId>
-                    <artifactId>slim</artifactId>
-                    <version>2.1.0</version>
-                    <type>gem</type>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctor-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>generate-slides</id>
-                                <goals>
-                                    <goal>process-asciidoc</goal>
-                                </goals>
-                                <configuration>
-                                    <attributes>
-                                        <!-- put here the reveal.js specific attributes -->
-                                    </attributes>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <profile>
-            <id>dzslides</id>
             <properties>
                 <backend>dzslides</backend>
                 <templateDir>${basedir}/asciidoctor-backends/slim</templateDir>
