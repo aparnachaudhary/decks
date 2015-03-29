@@ -1,26 +1,27 @@
-= Introduction to Docker
+= Maven Do's and Dont's
 Aparna Chaudhary
 
 [.topic.intro]
-== Intro
-
-== !
-
-*Title*
+== *Do's*
 
 == !
 
 [.incremental]
-* fun
-* easy
+*
 
-[.topic.source]
-== Source
+[NOTE]
+[role="speaker"]
+====
+* aa
 
-[source,ruby]
---
-puts 'Hello, World!'
---
+====
+
+
+[NOTE]
+[role="speaker"]
+====
+*
+====
 
 
 [.topic.ending, hrole="name"]

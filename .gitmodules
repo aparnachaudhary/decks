@@ -10,3 +10,9 @@
 [submodule "docker-introduction/src/main/slides/dzslides/dzslides"]
 	path = docker-introduction/src/main/slides/dzslides/dzslides
 	url = https://github.com/mojavelinux/dzslides.git
+[submodule "maven-dos-donts/asciidoctor-backends"]
+	path = maven-dos-donts/asciidoctor-backends
+	url = https://github.com/asciidoctor/asciidoctor-backends.git
+[submodule "maven-dos-donts/src/main/slides/dzslides/dzslides"]
+	path = maven-dos-donts/src/main/slides/dzslides/dzslides
+	url = https://github.com/mojavelinux/dzslides.git
